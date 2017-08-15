@@ -1,0 +1,63 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{cv}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\setlength{\textwidth}{5.1in} % set width of text portion
+\def\labelitemi{--}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+ \moveleft.5\hoffset\centerline{\Large\bf Anatoly Kim}
+ \moveleft.5\hoffset\centerline{software developer}
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+
+ \moveleft.5\hoffset\centerline{\href{http://github.com/blumonk}{github: blumonk}}
+ \moveleft.5\hoffset\centerline{ankimv@gmail.com}
+ \moveleft.5\hoffset\centerline{Saint Petersburg, Russian Federation}
+ 
+\begin{resume}
+ 
+\section{SUMMARY}  
+I'm a software developer with a solid academic background. \\
+Looking for an interesting position of Python backend developer. \\
+I appreciate flexibility and healty team environment.
+
+\section{SKILLS} 
+    Languages: Python 3.x, Go, Java, C/C++, Haskell, SQL \\
+    Tools \& systems: Django, Flask, Pandas, sklearn, git, nginx \\
+    Algorithms \& data structures \\
+    Linux/Unix, OS X
+                
+\section{EXPERIENCE} 
+CloudLinux, Remote \hfill February 2017 --- Present \\
+{\sl Junior Python Developer} 
+\begin{itemize}
+    \itemsep-2pt 
+    \itemindent-10pt
+	\item Imunify360 distributed firewall, server team
+	\item Python, asyncio, Go, MongoDB, Redis, Docker, 0mq
+\end{itemize}
+
+Solanteq, Saint Petersburg \hfill September 2015 --- March 2016 \\
+{\sl Junior Software Developer} 
+\begin{itemize}
+    \itemsep-2pt 
+    \itemindent-10pt
+	\item Payment processing platform
+	\item Java, Spring, Groovy, SQL, Maven, git
+\end{itemize}
+
+\section{EDUCATION} 
+ITMO University, Saint Petersburg \\
+{\sl Bachelor of Computer Science, 2017} \\\\
+Online courses:
+\begin{itemize} 
+    \itemsep-2pt 
+    \itemindent-10pt
+    \item \href{https://www.coursera.org/account/accomplishments/verify/NAC3H6WDW9TL}{Machine Learning (Stanford University)}
+    \item \href{https://www.coursera.org/account/accomplishments/verify/2LMELT5R6D25}{Neural Networks for Machine Learning (University of Toronto)}
+\end{itemize}
+
+\end{resume}
+\end{document}
