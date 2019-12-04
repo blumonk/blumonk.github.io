@@ -1,59 +1,67 @@
 % LaTeX resume using res.cls
 \documentclass[margin]{cv}
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
+%\usepackage{newcent}   % uses new century schoolbook postscript font
 \setlength{\textwidth}{5.1in} % set width of text portion
 \def\labelitemi{--}
 \usepackage[hidelinks]{hyperref}
 
 \begin{document}
 
- \moveleft.5\hoffset\centerline{\Large\bf Anatoly Kim}
- \moveleft.5\hoffset\centerline{software developer}
+ \moveleft.5\hoffset\centerline{\Large\bf Anatoly Kim}\smallskip
+ \moveleft.5\hoffset\centerline{Software Engineer}
  \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
 
- \moveleft.5\hoffset\centerline{\href{http://github.com/blumonk}{github: blumonk}}
+ \moveleft.5\hoffset\centerline{\href{https://anatoly.kim/}{https://anatoly.kim}}
  \moveleft.5\hoffset\centerline{ankimv@gmail.com}
  \moveleft.5\hoffset\centerline{Saint Petersburg, Russian Federation}
- 
-\begin{resume}
- 
-\section{SUMMARY}  
-I'm a software developer with a solid academic background. \\
-Looking for an interesting position of Python backend developer. \\
-I appreciate flexibility and healty team environment.
 
-\section{SKILLS} 
-    Languages: Python 3.x, Go, Java, C/C++, Haskell, SQL \\
-    Tools \& systems: Django, Flask, Pandas, sklearn, git, nginx \\
-    Algorithms \& data structures \\
-    Linux/Unix, OS X
-                
-\section{EXPERIENCE} 
-CloudLinux, Remote \hfill February 2017 --- Present \\
-{\sl Junior Python Developer} 
+\begin{resume}
+
+\section{SUMMARY}
+Software engineer with a solid background in computer science. \\
+Quick learner, team player, product-oriented. \\
+I seek challenging opportunities to make good and valuable things.
+\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+
+\section{SKILLS}
+    Languages: Python, Go, Java, C/\CC, SQL \\
+    Tools \& systems: *nix, git, Docker, SaltStack, Terraform \\
+    Databases: PostgreSQL, MongoDB, Redis
+
+\section{EXPERIENCE}
+\href{https://cloud.yandex.com}{Yandex.Cloud}, Saint Petersburg \hfill February 2018 --- Present \\
+{\sl Software Engineer}
 \begin{itemize}
-    \itemsep-2pt 
+    \itemsep-2pt
     \itemindent-10pt
-	\item Imunify360 distributed firewall, server team
-	\item Python, asyncio, Go, MongoDB, Redis, Docker, 0mq
+    \item Built \href{https://cloud.yandex.com/services/managed-redis}{Redis as a Service}
+	\item Worked on the MDB platform, internal services and tools
+\end{itemize}
+
+\href{https://www.cloudlinux.com}{CloudLinux}, Remote \hfill February 2017 --- February 2018 \\
+{\sl Junior Software Developer}
+\begin{itemize}
+    \itemsep-2pt
+    \itemindent-10pt
+    \item Worked on \href{https://www.imunify360.com}{Immunify360}, server security system
+	\item Developed backend of the incident management system
 \end{itemize}
 
 Solanteq, Saint Petersburg \hfill September 2015 --- March 2016 \\
-{\sl Junior Software Developer} 
+{\sl Junior Software Developer}
 \begin{itemize}
-    \itemsep-2pt 
+    \itemsep-2pt
     \itemindent-10pt
-	\item Payment processing platform
-	\item Java, Spring, Groovy, SQL, Maven, git
+	\item Worked on a payment processing platform
 \end{itemize}
 
-\section{EDUCATION} 
-ITMO University, Saint Petersburg \\
+\section{EDUCATION}
+\href{https://en.itmo.ru}{ITMO University}, Saint Petersburg \\
 {\sl Bachelor of Computer Science, 2017} \\\\
 Online courses:
-\begin{itemize} 
-    \itemsep-2pt 
+\begin{itemize}
+    \itemsep-2pt
     \itemindent-10pt
     \item \href{https://www.coursera.org/account/accomplishments/verify/NAC3H6WDW9TL}{Machine Learning (Stanford University)}
     \item \href{https://www.coursera.org/account/accomplishments/verify/2LMELT5R6D25}{Neural Networks for Machine Learning (University of Toronto)}
