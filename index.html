@@ -2,15 +2,17 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anatoly Kim</title>
     <link rel='shortcut icon' type='image/x-icon' href='tele.ico'>
-    <link href='http://fonts.googleapis.com/css?family=Space+Mono:400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Space+Mono:400' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:700' rel='stylesheet'>
     <link href='style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <div id='wrapper'>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
     <h1>👋 Hi! I'm Anatoly Kim</h1><hr>
     <p>
     I'm a software engineer, I write code at <a href='https://wolt.com'>Wolt</a>.<br>
@@ -25,15 +27,29 @@
 </div>
 
 <script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-   ym(53817493, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
+   // Theme toggle functionality
+   const themeToggle = document.getElementById('theme-toggle');
+   const body = document.body;
+
+   // Check for saved theme or default to system preference
+   const savedTheme = localStorage.getItem('theme');
+   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+   if (savedTheme) {
+       body.setAttribute('data-theme', savedTheme);
+       themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+   } else if (systemPrefersDark) {
+       body.setAttribute('data-theme', 'dark');
+       themeToggle.textContent = '☀️';
+   }
+
+   themeToggle.addEventListener('click', () => {
+       const currentTheme = body.getAttribute('data-theme');
+       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+       body.setAttribute('data-theme', newTheme);
+       localStorage.setItem('theme', newTheme);
+       themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
    });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/53817493" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </body>
 </html>

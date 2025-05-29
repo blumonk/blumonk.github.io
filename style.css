@@ -1,6 +1,29 @@
 :root {
   --underscore-color: #ff9800;
   --background-color: #fff0aa;
+  --text-color: #000;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --underscore-color: #ffab40;
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+  }
+}
+
+/* Manual theme switching */
+body[data-theme="dark"] {
+  --underscore-color: #ffab40;
+  --background-color: #1a1a1a;
+  --text-color: #e0e0e0;
+}
+
+body[data-theme="light"] {
+  --underscore-color: #ff9800;
+  --background-color: #fff0aa;
+  --text-color: #000;
 }
 
 body {
@@ -8,6 +31,7 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 h1, h2, h3 {
     font-family: 'Work Sans', sans-serif;
@@ -19,7 +43,7 @@ a {
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 3px 3px;
-  color: #000;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -43,4 +67,72 @@ hr {
     margin: auto;
     padding: 1.5rem;
     max-width: 50rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #wrapper {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p, a {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    #wrapper {
+        padding: 0.75rem;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    p, a {
+        font-size: 0.85rem;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    #wrapper {
+        max-width: 60rem;
+        padding: 2rem;
+    }
+}
+
+/* Theme toggle button styles */
+#theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: 2px solid var(--underscore-color);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--underscore-color);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #theme-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
 }
